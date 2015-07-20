@@ -2,10 +2,11 @@
 # follows
 # https://gist.github.com/mollietaylor/4210660
 
-require(maptools)
-require(plotKML)
-require(ggmap)
-require(raster)
+
+library(maptools)
+library(plotKML) 
+library(ggmap)
+library(raster)
 library(lubridate)
 library(sp)
 library(zoo)
