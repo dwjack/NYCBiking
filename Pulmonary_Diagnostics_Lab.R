@@ -10,12 +10,14 @@ pdl <- read.table(file, skip = 12, fill = TRUE, allowEscapes = FALSE,   row.name
 # note that this reads in the header information from each page
 # the following line drops that information
 
-pdl <- pdl[complete.cases(pdl),]
+pdl <- pdl[complete.cases(pdl), ]
 
+# name columns
 names(pdl) <- c("time", "work", "VO2/kg", "VE", "Vt", "RR", "RQ", "HR", "level")
 
-# add a column for rider ID
+# add a column for rider ID; need to insert correct info
 
+pdl$riderID <- "InsertRiderIdHere"
 
 head(pdl)
 
@@ -25,5 +27,3 @@ pdl$RR <- as.numeric(levels(pdl$RR))[pdl$RR]
 pdl$Vt <- as.numeric(levels(pdl$Vt))[pdl$Vt]
 
 
-plot(pdl$RR)
-plot(pdl$Vt)
